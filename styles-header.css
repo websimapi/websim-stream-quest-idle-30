@@ -27,6 +27,7 @@ header {
     padding: 10px;
     border-radius: 8px;
     min-width: 300px;
+    position: relative; /* allow absolute-positioned reward toast */
 }
 
 #task-label {
@@ -75,17 +76,22 @@ header {
 
 /* Rewards Toast Popup */
 .task-rewards-container {
-    height: 24px;
-    min-height: 0;
+    /* height: 24px; */       /* remove fixed height so it doesn't reserve space */
+    /* min-height: 0; */      /* no need when absolutely positioned */
     display: flex;
     justify-content: center;
     pointer-events: none; /* Let clicks pass through if overlapping (though it pushes layout) */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    transform: translateY(-2px); /* slightly higher than previous position */
 }
 
 .reward-toast-row {
     display: flex;
     gap: 8px;
-    margin-top: 2px;
+    /* margin-top: 2px; */ /* no longer needed since we position via transform */
     animation: reward-pop-fade 2.5s forwards ease-out;
 }
 
