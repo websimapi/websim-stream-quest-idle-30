@@ -75,7 +75,7 @@ header {
 
 /* Rewards Toast Popup */
 .task-rewards-container {
-    height: 30px;
+    height: 24px;
     min-height: 0;
     display: flex;
     justify-content: center;
@@ -85,7 +85,7 @@ header {
 .reward-toast-row {
     display: flex;
     gap: 8px;
-    margin-top: 8px;
+    margin-top: 2px;
     animation: reward-pop-fade 2.5s forwards ease-out;
 }
 
